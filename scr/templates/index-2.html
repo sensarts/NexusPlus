@@ -215,12 +215,11 @@
                                         <div class="select">
                                             <select>
                                                 <option value="none">Locations</option>
-                                                <option value="none">New York</option>
-                                                <option value="none">California</option>
-                                                <option value="none">Washington</option>
-                                                <option value="none">Birmingham</option>
-                                                <option value="none">Chicago</option>
-                                                <option value="none">Phoenix</option>
+
+                                                {% for region in regions %}
+                                                <option value="none">{{region}}</option>
+                                                {% endfor %}
+
                                             </select>
                                         </div>
                                         <i class="lni-target"></i>
@@ -231,7 +230,7 @@
                                                 <option value="none">Select Catagory</option>
 
                                                 {% for category in categories %}
-                                                <option value="none">{{category.is_main}}</option>
+                                                <option value="none">{{category}}</option>
                                                 {% endfor %}
 
                                             </select>
